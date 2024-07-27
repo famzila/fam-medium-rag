@@ -1,0 +1,8 @@
+{
+    "watch": [
+        "./src/**/*.ts",
+        "./.env"
+    ],
+    "ext": "ts,js,mjs,json",
+    "exec": "npm run start:tsx"
+}

@@ -1,0 +1,26 @@
+<main role="main" class="chat-container">
+  <div class="chat">
+    <!-- Conversation zone -->
+      <div class="conversation-container">
+          <div class="conversation"  #messageContainer>
+              @for (message of messages(); track i; let i = $index) {
+                  <div class="message"
+                      [ngClass]="{'human': message.type === 'human', 'bot': message.type === 'bot'}">
+                      <app-message [message]="message"/>
+                  </div>
+              }
+          </div>
+      </div>
+
+      <!-- Search input -->
+      <form class="input" [formGroup]="questionForm" (ngSubmit)="submitForm()">
+        <mat-form-field class="question-field">
+              <mat-label>Ask FAM Medium a question...</mat-label>
+              <input autofocus matInput placeholder="Ex. What's new in Angular 17?" formControlName="question">
+        </mat-form-field>
+        <button mat-fab color="warn" aria-label="Send the question" class="send-btn" [disabled]="isEmptyQuestion()">
+          <mat-icon>send</mat-icon>
+        </button>
+      </form>
+  </div>
+</main>

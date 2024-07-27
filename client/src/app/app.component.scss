@@ -1,0 +1,84 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 6rem;
+    height: 90vh;
+    border-radius: 28%;
+
+    .chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #FDFBFF;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        animation: shadow-animation 2s infinite alternate;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 20px 0 20px;
+        border-top: 1px solid #efe9e9;
+
+        .question-field {
+            width: 700px;
+        }
+
+        .send-btn {
+            margin-top: -22px;
+            margin-left: 20px;
+        }
+    }
+
+    .conversation-container {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 16px 20px 0 20px;
+        margin-bottom: 50px;
+        overflow: auto;
+        height: 100%;
+
+        .conversation {
+            width: 1000px;
+        }
+    }
+
+    .message {
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        line-height: 30px;
+    }
+
+    .message.human {
+        justify-content: flex-end;
+    }
+
+    .message.bot {
+        justify-content: flex-start;
+    }
+}
+
+
+@keyframes shadow-animation {
+    0% {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 15px rgba(30, 47, 51, 0.8);
+    }
+
+    50% {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(161, 238, 238, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 10px rgba(12, 89, 108, 0.8);
+    }
+}
+
+.post:hover {
+    animation: shadow-animation 2s infinite alternate;
+}
