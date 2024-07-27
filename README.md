@@ -2,6 +2,8 @@
 
 This project develops a chatbot that interacts with Medium articles using the Retrieval-Augmented Generation (RAG) technique. The frontend is built with Angular 18, leveraging modern features of Angular, and the backend is powered by Express.
 
+[🔗 Detailed article about this project](https://famzil.medium.com/chatting-with-my-medium-articles-thanks-to-genai-330db577a767)
+
 Please give a ⭐ to the repository if you like it and find it useful!
 ## Getting Started
 
