@@ -11,10 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MessageComponent } from './shared/message/message.component';
+import { MessageComponent } from './message/message.component';
 import { catchError, map, of, startWith } from 'rxjs';
-import { MessageService } from './shared/message/services/message.service';
-import { Message, APIResponse } from './shared/message/models/message.model';
+import { MessageService } from './message/services/message.service';
+import { Message, APIResponse } from './message/models/message.model';
 
 @Component({
   selector: 'app-root',
